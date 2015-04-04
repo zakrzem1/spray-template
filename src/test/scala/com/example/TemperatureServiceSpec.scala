@@ -1,13 +1,13 @@
 package com.example
 
-import org.specs2.mutable.Specification
-import spray.testkit.Specs2RouteTest
-import spray.http._
-import StatusCodes._
+//import org.specs2.mutable.Specification
 
-class TemperatureServiceSpec extends Specification with Specs2RouteTest with TemperatureService {
+import spray.http.StatusCodes._
+
+//with Specs2RouteTest
+class TemperatureServiceSpec extends FlatSpec with TemperatureService {
   def actorRefFactory = system
-  
+
   "TemperatureService" should {
 
     "return a greeting for GET requests to the root path" in {
